@@ -1,0 +1,15 @@
+@use 'assets/styles/media';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+  padding: 12px 24px;
+  background-color: var(--white);
+
+  @media (min-width: media.$desktop) {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+}

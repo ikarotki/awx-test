@@ -1,0 +1,62 @@
+.bar {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+}
+
+.segment {
+  flex: 1;
+  height: 24px;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--white);
+  border: 1px solid var(--light-grey);
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--dark-gray);
+
+  &.filledFull {
+    border: none;
+
+    &::before {
+      border-radius: 10px;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: var(--progress);
+    background-color: var(--main-blue);
+    transition: width 0.3s ease;
+    z-index: 1;
+  }
+
+  .textBack,
+  .textFront {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .textBack {
+    z-index: 2;
+    color: var(--dark-gray);
+  }
+
+  .textFront {
+    z-index: 3;
+    color: var(--white);
+    clip-path: inset(0 calc(100% - var(--progress)) 0 0);
+    transition: clip-path 0.3s ease;
+  }
+}
