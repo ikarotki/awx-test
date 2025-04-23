@@ -1,71 +1,62 @@
-AWX Test Task
+# AWX Test Task
 
-This is a frontend test assignment built with React 19, TypeScript, Vite, and SCSS Modules using a mobile-first responsive design approach.
+This project is a frontend test assignment built with **React 19**, **TypeScript**, **Vite**, and **SCSS Modules**, using a **mobile-first** responsive design approach.
 
-🚀 Tech Stack
+---
 
-React 19
+## 🚀 Tech Stack
 
-TypeScript
+- React 19
+- TypeScript
+- Vite
+- SCSS Modules (with custom breakpoints)
+- `classnames` for conditional styling
+- Jest + Testing Library for unit testing
 
-Vite
+---
 
-SCSS Modules (with custom breakpoints)
+---
 
-classnames (conditional styles)
+## 🧪 Testing
 
-Jest + Testing Library (unit & component testing)
+Unit tests are written using **Jest** and **Testing Library**.
 
-🛠 Getting Started
+Run all tests:
+
+```bash
+yarn test
+```
+
+Tests are colocated next to source files (`*.test.ts[x]`).
+
+---
+
+## 🛠 Getting Started
 
 Install dependencies:
 
+```bash
 yarn install
+```
 
-# or
+Run in development:
 
-npm install
-
-Run the dev server:
-
+```bash
 yarn dev
+```
 
 App will be available at: http://localhost:5173
 
-Run linter:
+Lint the code:
 
+```bash
 yarn lint
+```
 
-Run tests:
+---
 
-yarn test
+## 📌 Notes
 
-✅ Features
-
-Validated number inputs with min, max, step
-
-Currency conversion with rounded precision
-
-Debounced API simulation
-
-Visual progress indicator based on value
-
-Fully covered core logic with unit & integration tests
-
-💪 Tests
-
-Placed next to their source files
-
-Written with Jest + @testing-library/react
-
-Coverage includes:
-
-utils/precision.ts
-
-hooks/useExchangeDebounced.ts
-
-components/CurrencyInputBlock
-
-📌 Notes
-
-Inputs now use native <input type="number"> for better accessibility and browser support
+- All inputs use `input type="number"` for native step/min/max support and mobile UX.
+- Exchange calculation is debounced.
+- All logic is covered with unit tests.
