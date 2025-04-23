@@ -1,67 +1,71 @@
 AWX Test Task
 
-This project is a frontend test assignment built with React 19, TypeScript, Vite, and SCSS Modules using a mobile-first responsive design approach.
+This is a frontend test assignment built with React 19, TypeScript, Vite, and SCSS Modules using a mobile-first responsive design approach.
 
 🚀 Tech Stack
 
-React
+React 19
+
 TypeScript
+
 Vite
+
 SCSS Modules (with custom breakpoints)
-classnames for conditional styles
 
-📦 Project Structure
+classnames (conditional styles)
 
-src/
-  assets/
-    styles/               → Global SCSS variables, fonts, media helpers
-      _constants.scss
-      _fonts.scss
-      _media.scss
-      Main.scss
-
-  components/            → Reusable UI components
-    AmountBlock/         → Custom input using contentEditable
-      AmountBlock.tsx
-      AmountBlock.module.scss
-
-    Card/                → Layout wrapper block
-      Card.tsx
-      Card.module.scss
-
-    CurrencyInputBlock/  → Composite input + progress block
-      CurrencyInputBlock.tsx
-      CurrencyInputBlock.module.scss
-
-    ProgressBar/         → Segmented, fill-inverting progress bar
-      ProgressBar.tsx
-      ProgressBar.module.scss
-
-  App.tsx                → Main app layout
-  main.tsx               → Entry point
+Jest + Testing Library (unit & component testing)
 
 🛠 Getting Started
 
-Install dependencies
+Install dependencies:
 
-# Using Yarn
 yarn install
 
-# Or using npm
+# or
+
 npm install
 
-Run the app in development
+Run the dev server:
 
 yarn dev
 
 App will be available at: http://localhost:5173
 
-Lint the code
+Run linter:
 
 yarn lint
 
+Run tests:
 
+yarn test
+
+✅ Features
+
+Validated number inputs with min, max, step
+
+Currency conversion with rounded precision
+
+Debounced API simulation
+
+Visual progress indicator based on value
+
+Fully covered core logic with unit & integration tests
+
+💪 Tests
+
+Placed next to their source files
+
+Written with Jest + @testing-library/react
+
+Coverage includes:
+
+utils/precision.ts
+
+hooks/useExchangeDebounced.ts
+
+components/CurrencyInputBlock
 
 📌 Notes
 
-The input field uses contentEditable for fine-grained control over caret and formatting.
+Inputs now use native <input type="number"> for better accessibility and browser support

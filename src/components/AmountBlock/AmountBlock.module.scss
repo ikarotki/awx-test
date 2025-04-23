@@ -1,20 +1,44 @@
 .wrapper {
   display: flex;
-  width: 100%;;
+  align-items: center;
   margin-bottom: 8px;
   padding: 8px 0;
   border-bottom: 1px solid var(--light-grey);
-  align-items: center;
   font-weight: 600;
+  position: relative;
 }
 
-.editable {
+.input {
+  border: none;
   font-size: 42px;
+  font-weight: 600;
   color: var(--black);
-  outline: none;
   caret-color: var(--black);
-  white-space: nowrap;
-  min-width: 1ch;
+
+  appearance: textfield;
+  -moz-appearance: textfield;
+  // Chrome / Safari
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -33px;
+  left: 0;
+  font-size: 12px;
+  background: #f44336;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  z-index: 5;
 }
 
 .currency {
